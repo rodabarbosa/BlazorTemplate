@@ -1,0 +1,91 @@
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+) !default;
+
+/* ### MINE ### */
+$font-family: 'Nunito Sans', Helvetica !default;
+
+$primary: #69BBFF !default;
+$secondary: #0054A0 !default;
+
+$menu-primary: #1E2543 !default;
+
+$font-color: #212529 !default;
+$outline: #B5B5B5 !default;
+$error: #FA541C !default;
+$success: #00C851 !default;
+$warning: #FFB300 !default;
+
+$menu-font-color: $gray-400 !default;
+$menu-font-color-hover: $white !default;
+$menu-font-color-active: $white !default;
+$menu-active-color: #69BBFF !default;
+
+$menu-width: 15% !default;
+$size-none: 0 !default;
+
+$default-radius: 0.25rem !default;
+
+/* Start Button */
+$btn-padding-top-bottom: 0.5rem !default;
+$btn-padding-left-right: 0.75rem !default;
+$btn-width-min: 8rem !default;
+$btn-border: 1px solid transparent !default;
+$btn-margin: 0.2rem !default;
+
+$btn-primary-bg: #1E2543;
+$btn-primary-font-color: $primary;
+$btn-secondary-bg: $secondary;
+$btn-secondary-font-color: $white;
+
+/* End Button */
+
+/* Start input */
+$input-width: 100% !default;
+$input-height: 3rem !default;
+$input-font-size: 1.1em !default;
+$input-font-weight: 400 !default;
+$input-border: 1px solid $outline !default;
+$input-left-holder-default: 0.3rem solid $primary !default;
+$input-left-holder-success: 0.3rem solid $success !default;
+$input-left-holder-error: 0.3rem solid $error !default;
+$input-left-holder-warning: 0.3rem solid $warning !default;
+$input-padding: 0.2rem 1rem !default;
+/* End input */
+
+/* Start switcher */
+$switcher-width: 60px !default;
+$switcher-height: 34px !default;
+$switcher-transform-width: 26px !default;
+$switcher-transform: translateX($switcher-transform-width) !default;
+$switcher-shadow: 0 0 1px $primary !default;
+$switcher-transition-time: 0.4s !default;
+$switcher-radius: 34px !default;
+$switcher-slider-background-color: #ccc !default;
+/* End switcher */
+
+/* ####  */

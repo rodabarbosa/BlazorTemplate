@@ -1,0 +1,33 @@
+button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  min-width: $btn-width-min;
+  padding: $btn-padding-top-bottom $btn-padding-left-right;
+  border-radius: $default-radius;
+  border: $btn-border;
+  margin: $btn-margin;
+
+  &.btn-primary {
+    color: $btn-primary-font-color;
+    background: $btn-primary-bg;
+    border-color: $btn-primary-bg;
+  }
+
+  &.btn-secondary {
+    color: $btn-secondary-font-color;
+    background: $btn-secondary-bg;
+    border-color: $btn-secondary-bg;
+  }
+
+  &:hover {
+    font-weight: bolder;
+  }
+
+  &:disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+  }
+}

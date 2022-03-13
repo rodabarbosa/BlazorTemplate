@@ -1,0 +1,27 @@
+@page "/samples"
+@using Sirb.Template.WebApp.Shared.Components
+@inherits FormSampleComponent
+
+<EditForm Model="@SampleModel">
+
+    <div style="margin-bottom:1rem;">
+        <TextInput @bind-Value="SampleModel.Text" Label="Text Label" PlaceHolder="placeholder text" />
+        <TextInput @bind-Value="SampleModel.Text" Label="Text Label readonly" PlaceHolder="placeholder text readonly"
+            Readonly="true" Name="readonly" />
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <CheckboxInput @bind-Value="SampleModel.CheckBox" Label="Checkbox Label" />
+        <SwitcherInput @bind-Value="SampleModel.Switcher" Label="Switcher Label" />
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <PasswordInput ShowPassword="@SampleModel.ShowPassword" @bind-Value="@SampleModel.Password" Label="Password" Placeholder="Password test" />
+        <button class="btn btn-primary" @onclick="() => { SampleModel.ShowPassword = !SampleModel.ShowPassword; }">Show Password</button>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <button class="btn btn-primary" @onclick="@OnClick">CLICK ME 1</button>
+        <button class="btn btn-secondary" @onclick="@OnClick">CLICK ME 2</button>
+    </div>
+</EditForm>

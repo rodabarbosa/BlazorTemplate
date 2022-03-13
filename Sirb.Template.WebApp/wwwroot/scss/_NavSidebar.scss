@@ -1,0 +1,170 @@
+nav {
+  display: inline;
+  float: left;
+  width: $menu-width;
+  min-height: 100%;
+  background-color: $menu-primary;
+  color: $white;
+
+  .navbar {
+    background-color: $menu-primary;
+    width: $menu-width;
+    height: 10%;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+
+    .navbar-brand {
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 5%;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 30%;
+        left: 30%;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .links {
+    display: grid;
+    width: 100%;
+    margin: 30% 0px 35%;
+
+    a {
+      color: $menu-font-color !important;
+      padding: 1rem;
+
+      &:hover {
+        color: $menu-font-color-hover !important;
+        background-color: $menu-active-color !important;
+        font-weight: lighter;
+      }
+
+      span {
+        margin: $size-none 5%;
+      }
+    }
+
+    .active {
+      color: $menu-font-color-active !important;
+      background-color: $menu-active-color !important;
+      font-weight: bolder;
+    }
+  }
+
+  footer {
+    display: flow-root;
+    width: $menu-width;
+    text-align: center;
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 1rem;
+    position: fixed;
+    left: $size-none;
+    bottom: $size-none;
+    background-color: $menu-primary;
+
+    div {
+      margin: 2% $size-none;
+    }
+
+    img {
+      width: 5rem;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  nav {
+    .links {
+      margin-top: 45%;
+    }
+  }
+}
+
+@media (max-width: 1172px) {
+  nav {
+    .navbar {
+      margin: 0px;
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  nav {
+    .links {
+      margin-top: 50%;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  nav {
+    .navbar {
+      .navbar-brand {
+        img {
+          display: none;
+        }
+
+        span {
+          margin: 0;
+          right: 15%;
+        }
+      }
+    }
+
+    a {
+      font-size: 0.8rem;
+    }
+
+    .links {
+      margin-top: 65%;
+    }
+  }
+}
+
+@media (max-width: 778px) {
+  nav {
+    .links {
+      margin-bottom: 50%;
+    }
+  }
+}
+
+@media (min-width: 641px) {
+  nav {
+    .navbar-toggler {
+      display: none;
+    }
+
+    .collapse {
+      // Never collapse the sidebar for wide screens
+      display: block;
+    }
+  }
+}

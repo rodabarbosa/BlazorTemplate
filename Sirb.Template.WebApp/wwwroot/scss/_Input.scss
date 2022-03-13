@@ -1,0 +1,126 @@
+.input-block {
+  display: grid !important;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    display: block;
+    width: $input-width;
+    height: $input-height;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight;
+    line-height: 1.5;
+    color: $font-color;
+    background-color: $white;
+    background-clip: padding-box;
+    border: $input-border;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: $default-radius;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+      outline-color: $outline;
+      outline-style: 1px solid $outline;
+    }
+
+    &:not([type="checkbox"]),
+    &:not([type="radio"]) {
+      border-left: 0.4rem solid $primary !important;
+      padding: $input-padding;
+
+    }
+
+    &:read-only,
+    &:disabled {
+      background-color: $gray-200;
+    }
+
+    &:invalid,
+    &.invalid {
+      border-color: $error !important;
+      border-left: $input-left-holder-error !important;
+    }
+  }
+}
+
+.input-check {
+  display: inline-block;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    transform: scale(1.5) !important;
+  }
+
+  label {
+    margin-left: 0.5rem;
+  }
+}
+
+.input-switcher {
+  display: grid;
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: $switcher-width;
+    height: $switcher-height;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .slider {
+        background-color: $primary;
+      }
+
+      &:focus + .slider {
+        box-shadow: $switcher-shadow;
+
+      }
+
+      &:checked + .slider:before {
+        -webkit-transform: $switcher-transform;
+        -ms-transform: $switcher-transform;
+        transform: $switcher-transform;
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $switcher-slider-background-color;
+      -webkit-transition: $switcher-transition-time;
+      transition: $switcher-transition-time;
+      border-radius: $switcher-radius;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: $white;
+        -webkit-transition: $switcher-transition-time;
+        transition: $switcher-transition-time;
+        border-radius: 50%;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+* {
+  margin: $size-none;
+  padding: $size-none;
+  font-family: $font-family;
+}
+
+html, body {
+  background-color: $gray-100;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 100vh;
+}
+
+main {
+  float: left;
+  width: 80.5%;
+  padding: 1rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: $white;
+}
+
+@media (max-width: 1030px) {
+  main {
+    width: 80%;
+  }
+}
+
+@media (max-width: 928px) {
+  main {
+    width: 79%;
+  }
+}
+
+@media (max-width: 773px) {
+  main {
+    width: 78%;
+  }
+}
+
+@media (max-width: 663px) {
+  main {
+    width: 77%;
+  }
+}
+
+@media (max-width: 580px) {
+  main {
+    width: 76%;
+  }
+}

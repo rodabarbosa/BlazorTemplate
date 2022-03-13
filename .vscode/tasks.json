@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/Nordware.Template.WebApp/Nordware.Template.WebApp.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "publish",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "publish",
+        "${workspaceFolder}/Nordware.Template.WebApp/Nordware.Template.WebApp.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "watch",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "${workspaceFolder}/Nordware.Template.WebApp/Nordware.Template.WebApp.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Watch Sass",
+      "command": "sass",
+      "type": "shell",
+      "args": [
+        "--watch",
+        "${workspaceFolder}/Nordware.Template.WebApp/wwwroot/scss/Components.scss",
+        "${workspaceFolder}/Nordware.Template.WebApp/wwwroot/css/components.min.css",
+        "--style=compressed"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

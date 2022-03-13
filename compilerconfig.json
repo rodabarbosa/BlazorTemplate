@@ -1,0 +1,9 @@
+[
+  {
+    "inputFile": "Nordware.Template.WebApp/wwwroot/scss/Components.scss",
+    "outputFile": "Nordware.Template.WebApp/wwwroot/css/components.min.css",
+    "minify": {
+      "enabled": true
+    }
+  }
+]

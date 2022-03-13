@@ -1,0 +1,27 @@
+﻿@inherits NavMenuBase
+
+<div class="navbar">
+  <a class="navbar-brand" href="">
+    <span>Template</span>
+  </a>
+  <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+    <span class="oi oi-menu" aria-hidden="true"></span>
+  </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+  <div class="links">
+    <NavItem Label="Home" Uri="" Icon="oi-home" Match="NavLinkMatch.All" />
+    <NavItem Label="Counter" Uri="counter" Icon="oi-plus" Match="NavLinkMatch.All" />
+    <NavItem Label="Fetch data" Uri="fetchdata" Icon="oi-list-rich" Match="NavLinkMatch.All" />
+    <NavItem Label="Samples" Uri="samples" Icon="oi-list-rich" Match="NavLinkMatch.All"/>
+  </div>
+</div>
+
+<footer>
+  <div>Powered by</div>
+  <div>
+    <span>Business Name</span>
+  </div>
+  <div>Version @GetVersion()</div>
+</footer>
