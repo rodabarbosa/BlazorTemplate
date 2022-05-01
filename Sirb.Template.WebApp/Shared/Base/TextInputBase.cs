@@ -6,8 +6,8 @@ namespace Sirb.Template.WebApp.Shared.Base;
 
 public class TextInputBase : InputBase<string>
 {
-    [Parameter] public string Label { get; set; }
-    [Parameter] public string Placeholder { get; set; }
+    [Parameter] public string? Label { get; set; }
+    [Parameter] public string? Placeholder { get; set; }
     private const string TextInputType = "text";
 
     /// <inheritdoc/>
@@ -38,7 +38,7 @@ public class TextInputBase : InputBase<string>
         builder.AddMultipleAttributes(5, AdditionalAttributes);
         builder.AddAttribute(6, "class", CssClass);
         builder.AddAttribute(7, "value", BindConverter.FormatValue(CurrentValue));
-        builder.AddAttribute(8, "onchange", EventCallback.Factory.CreateBinder<string>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
+        if (CurrentValueAsString != null) builder.AddAttribute(8, "onchange", EventCallback.Factory.CreateBinder<string>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
         builder.AddAttribute(9, "type", GetInputType());
 
         if (!string.IsNullOrEmpty(Placeholder))
@@ -53,7 +53,7 @@ public class TextInputBase : InputBase<string>
     protected override bool TryParseValueFromString(string value, out string result, out string validationErrorMessage)
     {
         result = value;
-        validationErrorMessage = null;
+        validationErrorMessage = default;
         return true;
     }
 
